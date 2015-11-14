@@ -90,9 +90,9 @@ def Update_book(request):
     npublishdate = request.GET['publishdate']
     nprice = request.GET['price']
     if nISBN and ntitle and nauthor and npublisher and npublishdate and nprice:
-        t_new_author = Author.objects.filter(Name = nauthor)
-        if t_new_author:
-            new_author = t_new_author[0]
+        a_new_author = Author.objects.filter(Name = nauthor)
+        if a_new_author:
+            new_author = a_new_author[0]
             book=Book.objects.get(ISBN = nISBN)
             book.Author = new_author
             book.Publisher = npublisher

@@ -7,7 +7,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'mybook.views.Home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
+    
     url(r'^serch/', 'mybook.views.Serch_table', name='serch_table'),
     url(r'^books/', 'mybook.views.Serch', name='serch'),
     url(r'^delete/', 'mybook.views.Delete_book', name='delete_book'),

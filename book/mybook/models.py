@@ -6,7 +6,7 @@ class Author(models.Model):
     AuthorID = models.AutoField(primary_key = True)
     Name = models.CharField(max_length=50)
     Age = models.IntegerField()
-    Country = models.CharField(max_length=70)
+    Country = models.CharField(max_length=50)
     
 class Book(models.Model):
     ISBN = models.AutoField(primary_key=True)
