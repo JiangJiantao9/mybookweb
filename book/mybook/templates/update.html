@@ -1,0 +1,41 @@
+﻿<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+</head>
+<style> 
+body{text-align:center} 
+</style>
+<body>
+<p>请更新书籍信息</p>
+
+ 
+<form action="/update_book/" method="get">
+   <table border="1" align="center">
+    <tr>
+      <th>ISBN</th>
+      <th>title</th>
+      <th>author</th>
+      <th>publisher</th>
+      <th>publisher date</th>
+      <th>price</th>
+    </tr>
+    <tr>
+      <td><input type="text" name="ISBN" value={{ book.ISBN }} readOnly="true">  </td>
+      <td><input type="text" name="title" value={{ book.Title }} readOnly="true">  </td>
+      <td><input type="text" name="author" value={{ book.AuthorID.Name }}> </td>
+      <td><input type="text" name="publisher" value={{ book.Publisher }}></td>
+      <td><input type="text" name="publishdate" value={{ book.PublishDate }}></td>
+      <td><input type="text" name="price" value={{ book.Price }}></td>
+    </tr>
+   </table>
+{% if i == 1 %}
+ <p>请输入全部信息</p>
+{% endif %}
+  <input type="submit" value="提交">
+</form>
+<form action="/">
+    <input type="submit" value="返回首页">
+</form>
+ 
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+</head>
+
+<style> 
+body{text-align:center} 
+</style>
+<body>
+<p>作者:{{ Author_name }}</p>   
+<table border="1" align="center">
+ <tr>
+  <th>题目</th>
+ 
+  
+ </tr>
+ <tr>
+  {% for i in books %}
+   <tr>
+    <td><a href="/information/?bookname={{ i }}">{{ i }}</a></td>
+   </tr>
+  {% endfor %}
+   </tr>
+ </table>
+ <form action="/">
+    <input type="submit" value="返回首页">
+ </form>
+ 
+</body>
+</html>
